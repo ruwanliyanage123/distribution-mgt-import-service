@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  pre_build:
+    commands:
+      - echo Logging into AWS ECR
+      - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 861276115671.dkr.ecr.eu-north-1.amazonaws.com)
+      - cd import-service
+  build:
+    commands:
+      - echo building the Docker image
+      - docker build -t import-service .
+      - docker tag import-service:latest 861276115671.dkr.ecr.eu-north-1.amazonaws.com/import-service:latest
+      - docker push 861276115671.dkr.ecr.eu-north-1.amazonaws.com/import-service:latest
+artifacts:
+  files: []

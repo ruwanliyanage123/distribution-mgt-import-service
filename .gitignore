@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual Environments
+.env
+ddec-venv
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Distribution/Packaging
+*.egg-info/
+dist/
+build/
+eggs/
+lib/
+lib64/
+*.egg
+
+# pytest cache
+.cache/
+pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pylint reportsg
+pylint-report.txt
+
+# coverage reports
+*.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+ *.idea/
+/images
